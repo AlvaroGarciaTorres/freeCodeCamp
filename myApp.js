@@ -1,5 +1,10 @@
-require('dotenv').config();
+import { MONGO_URI } from "./sample.env"
 
+require('dotenv').config();
+const mongoose = require('mongoose');
+const URI = MONGO_URI;
+
+mongoose.connect(URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 let Person;
 
